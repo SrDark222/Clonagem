@@ -3,72 +3,72 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Clonador DKZIN</title>
+<title>Clonador DKZIN Pro</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="glass">
-  <h1>DKZIN CLONADOR</h1>
-  <nav>
-    <a href="#clonar">Clonar</a>
-    <a href="#config">Configurações</a>
-    <a href="#preview">Preview</a>
-  </nav>
-</header>
+  <header class="glass">
+    <h1>DKZIN CLONADOR PRO</h1>
+    <nav>
+      <a href="#clonar">Clonar</a>
+      <a href="#config">Config</a>
+      <a href="#preview">Preview</a>
+    </nav>
+  </header>
 
-<main>
-  <section id="clonar" class="glass section">
-    <h2>Clonagem de Site</h2>
-    <form id="cloneForm">
-      <label for="url">URL do site</label>
-      <input type="url" id="url" placeholder="https://exemplo.com" required />
-      
-      <label for="method">Método de Scraper</label>
-      <select id="method">
-        <option value="requests">Requests + BS4</option>
-        <option value="selenium">Selenium</option>
-        <option value="puppeteer">Puppeteer</option>
-        <option value="playwright">Playwright</option>
-      </select>
+  <main>
+    <section id="clonar" class="glass section">
+      <h2>Clonagem de Site</h2>
+      <form id="cloneForm">
+        <label for="url">URL do Site</label>
+        <input type="url" id="url" name="url" placeholder="https://exemplo.com" required />
 
-      <fieldset>
-        <legend>O que clonar?</legend>
-        <label><input type="checkbox" id="cloneCss" checked /> CSS</label>
-        <label><input type="checkbox" id="cloneJs" checked /> JS</label>
-        <label><input type="checkbox" id="cloneImgs" checked /> Imagens</label>
-        <label><input type="checkbox" id="cloneZip" checked /> Compactar ZIP</label>
-        <label><input type="checkbox" id="clonePng" checked /> Gerar preview PNG</label>
-      </fieldset>
+        <label for="method">Método do Scraper</label>
+        <select id="method" name="method" required>
+          <option value="requests">Requests + BS4</option>
+          <option value="selenium">Selenium</option>
+          <option value="puppeteer">Puppeteer</option>
+          <option value="playwright">Playwright</option>
+        </select>
 
-      <button type="submit" class="btn">Iniciar Clonagem</button>
-    </form>
-  </section>
+        <fieldset>
+          <legend>O que clonar?</legend>
+          <label><input type="checkbox" name="cloneCss" checked /> CSS</label>
+          <label><input type="checkbox" name="cloneJs" checked /> JS</label>
+          <label><input type="checkbox" name="cloneImgs" checked /> Imagens</label>
+          <label><input type="checkbox" name="cloneZip" checked /> Compactar ZIP</label>
+          <label><input type="checkbox" name="clonePng" checked /> Gerar preview PNG</label>
+        </fieldset>
 
-  <section id="config" class="glass section">
-    <h2>Configurações Avançadas</h2>
-    <label for="userAgent">User-Agent</label>
-    <input type="text" id="userAgent" value="Mozilla/5.0 DKZIN" />
+        <button type="submit" class="btn">Iniciar Clonagem</button>
+      </form>
+    </section>
 
-    <label for="delay">Delay entre requisições (ms)</label>
-    <input type="number" id="delay" value="200" min="0" />
+    <section id="config" class="glass section">
+      <h2>Configurações Avançadas</h2>
+      <label for="userAgent">User-Agent</label>
+      <input type="text" id="userAgent" name="userAgent" value="Mozilla/5.0 DKZIN" />
 
-    <label for="depth">Profundidade máxima de crawl</label>
-    <input type="number" id="depth" value="3" min="1" />
-  </section>
+      <label for="delay">Delay entre requisições (ms)</label>
+      <input type="number" id="delay" name="delay" value="200" min="0" />
 
-  <section id="preview" class="glass section">
-    <h2>Visualização</h2>
-    <div id="previewContainer" class="preview">
-      <img id="previewImg" src="" alt="Preview do site" hidden />
-      <a id="downloadZip" href="#" download="site_clonado.zip" hidden>Baixar ZIP</a>
-    </div>
-  </section>
-</main>
+      <label for="depth">Profundidade máxima de crawl</label>
+      <input type="number" id="depth" name="depth" value="3" min="1" />
+    </section>
 
-<footer class="glass footer">
-  &copy; 2025 DKZIN. Sistema letal de clonagem.
-</footer>
+    <section id="preview" class="glass section">
+      <h2>Preview</h2>
+      <div id="previewContainer" class="preview">
+        <img id="previewImg" src="" alt="Preview do site" hidden />
+        <a id="downloadZip" href="#" download="site_clonado.zip" hidden>Baixar ZIP</a>
+      </div>
+    </section>
+  </main>
 
-<script src="script.js"></script>
+  <footer class="glass footer">
+    &copy; 2025 DKZIN. Todos os direitos reservados.
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
