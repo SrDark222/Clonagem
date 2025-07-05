@@ -1,42 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  background: linear-gradient(90deg, #000000 0%, #111111 100%);
-  color: #ddd;
-  font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0; padding: 0;
+  background: #000;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column; min-height: 100vh;
 }
 
 .glass {
   background: rgba(255 255 255 / 0.05);
-  backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
   border: 1px solid rgba(255 255 255 / 0.1);
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgb(255 255 255 / 0.03);
+  box-shadow: 0 0 25px rgba(255 255 255 / 0.03);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 header.glass {
-  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255 255 255 / 0.1);
-  box-shadow: 0 2px 10px rgb(255 255 255 / 0.05);
+  padding: 15px 30px;
 }
 
 header h1 {
   font-weight: 900;
-  letter-spacing: 0.15em;
-  font-size: 1.75rem;
+  letter-spacing: 0.1em;
+  font-size: 1.8rem;
 }
 
 header nav a {
@@ -44,7 +35,7 @@ header nav a {
   margin-left: 20px;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 header nav a:hover {
@@ -53,43 +44,33 @@ header nav a:hover {
 
 main {
   flex: 1;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  width: 100%;
+  padding-bottom: 40px;
 }
 
 .section {
-  padding: 30px 30px;
   margin-bottom: 30px;
 }
 
-form label {
+form label,
+fieldset legend {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
-form input[type="url"],
-form input[type="text"],
-form input[type="number"],
-form select {
+input[type="url"],
+input[type="text"],
+input[type="number"],
+select {
   width: 100%;
   padding: 12px 14px;
-  background: #111111;
-  border: 1px solid #444444;
   border-radius: 12px;
+  border: 1px solid #444;
+  background: #111;
   color: #ddd;
   font-size: 1rem;
   margin-bottom: 20px;
-  transition: border-color 0.3s;
-}
-
-form input[type="url"]:focus,
-form input[type="text"]:focus,
-form input[type="number"]:focus,
-form select:focus {
-  outline: none;
-  border-color: #888888;
 }
 
 fieldset {
@@ -97,13 +78,7 @@ fieldset {
   margin-bottom: 20px;
 }
 
-fieldset legend {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
 fieldset label {
-  display: inline-block;
   margin-right: 15px;
   font-weight: 400;
   cursor: pointer;
@@ -116,16 +91,15 @@ input[type="checkbox"] {
 }
 
 .btn {
-  display: inline-block;
   background: #fff;
   color: #000;
+  padding: 14px 30px;
   border-radius: 15px;
   font-weight: 700;
-  padding: 14px 30px;
-  cursor: pointer;
-  border: none;
-  transition: background 0.3s;
   font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -133,37 +107,36 @@ input[type="checkbox"] {
 }
 
 .preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 #previewImg {
   max-width: 100%;
   max-height: 400px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgb(255 255 255 / 0.1);
-  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255 255 255 / 0.1);
+  margin-bottom: 15px;
 }
 
 #downloadZip {
   background: #fff;
   color: #000;
-  padding: 12px 30px;
-  border-radius: 15px;
+  padding: 10px 30px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 700;
-  transition: background 0.3s;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 #downloadZip:hover {
   background: #ddd;
 }
 
-footer.footer {
+footer.glass.footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
   font-size: 0.85rem;
   color: #666;
   border-top: 1px solid rgba(255 255 255 / 0.1);
-  }
+}
